@@ -2,11 +2,5 @@
   "name": "@ignite-ui/ts-config",
   "version": "1.0.0",
   "license": "MIT",
-  "private": true,
-  "dependencies": {
-    "@ignite-ui/ts-config": "file:",
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.0.0",
-    "typescript": "^5.0.0"
-  }
+  "private": true
 }
