@@ -1,0 +1,2 @@
+import{A as t}from"./index.67ec5d47.js";import"./index.96cce31f.js";import"./iframe.da64e896.js";import"./index.6f27cda6.js";import"./jsx-runtime.d66a3f71.js";const p={title:"Data display/Avatar",component:t,args:{src:"https://github.com/aiemao.png",alt:"Celio Junior"},argTypes:{src:{control:{type:"text"}}}},c={},e={args:{src:void 0}},m=["Primary","WithFallback"];export{c as Primary,e as WithFallback,m as __namedExportsOrder,p as default};
+//# sourceMappingURL=Avatar.stories.04236764.js.map
