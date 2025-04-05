@@ -5,6 +5,11 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write # for pushing to the gh-pages branch
+  id-token: write # for deploying to GitHub Pages
+  pages: write # for deploying to GitHub Pages
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
