@@ -11,3 +11,4 @@ export * from './components/ToolTip'
 export * from './components/Flex'
 export * from './components/Toastify'
 
+export * from './styles'

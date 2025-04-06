@@ -15,18 +15,19 @@ export const Button = styled('button', {
   padding: '0 $4',
   transition: 'all 0.2s ease-in-out',
 
-
   '&:disabled': {
     opacity: 0.6,
     cursor: 'not-allowed',
   },
 
+  '&:disabled': {
+    boxShadow: '0 0 0 2px $colors$gray300',
+  },
 
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   gap: '$2',
-
 
   cursor: 'pointer',
 
@@ -34,7 +35,6 @@ export const Button = styled('button', {
     width: '$4',
     height: '$4',
   },
-
 
   variants: {
     variant: {
@@ -44,9 +44,8 @@ export const Button = styled('button', {
 
         '&:not(:disabled):hover': {
           background: '$ignite300',
-        }
+        },
       },
-
 
       secondary: {
         color: '$ignite300',
@@ -54,44 +53,34 @@ export const Button = styled('button', {
 
         '&:not(:disabled):hover': {
           background: '$ignite500',
-          color: '$white'
-        }
+          color: '$white',
+        },
       },
-
 
       tertiary: {
         color: '$gray100',
 
-
         '&:not(:disabled):hover': {
-          color: '$white'
-        }
-      }
-
-
-
-
+          color: '$white',
+        },
+      },
     },
-
 
     size: {
       md: {
-        height: 46
+        height: 46,
       },
 
       sm: {
         height: 38,
-      }
+      },
     },
   },
-
 
   defaultVariants: {
     variant: 'primary',
     size: 'md',
-  }
-
-
+  },
 })
 
-Button.displayName = 'Button';
+Button.displayName = 'Button'
