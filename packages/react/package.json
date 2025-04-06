@@ -1,12 +1,12 @@
 {
-  "name": "@ignite-ui/react",
-  "version": "1.0.0",
+  "name": "@celio-gnite-ui/react",
+  "version": "2.0.0",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+    "build": "tsup src/index.tsx --format esm,cjs --dts  --external react",
     "dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch",
     "lint": "eslint src/**/*.ts* --fix"
   },
@@ -14,18 +14,20 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@ignite-ui/eslint-config": "*",
-    "@ignite-ui/tokens": "*",
-    "@ignite-ui/ts-config": "*",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
+    "@celio-gnite-ui/eslint-config": "*",
+    "@celio-gnite-ui/tokens": "*",
+    "@celio-gnite-ui/ts-config": "*",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
     "react": "^18.2.0",
-    "tsup": "^6.2.3",
-    "typescript": "^4.8.4"
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.4"
   },
   "dependencies": {
-    "@radix-ui/react-avatar": "^1.0.0",
-    "@radix-ui/react-checkbox": "^1.0.0",
+    "@radix-ui/react-avatar": "^1.0.1",
+    "@radix-ui/react-checkbox": "^1.0.1",
+    "@radix-ui/react-toast": "^1.1.2",
+    "@radix-ui/react-tooltip": "^1.0.2",
     "@stitches/react": "^1.2.8",
     "phosphor-react": "^1.4.1"
   }

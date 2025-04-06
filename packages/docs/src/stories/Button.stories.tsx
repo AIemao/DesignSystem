@@ -1,73 +1,81 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { Button, ButtonProps } from '@ignite-ui/react'
-import { ArrowRight } from 'phosphor-react'
+import { Meta, StoryObj } from '@storybook/react'
+import { Button, ButtonProps } from '@celio-gnite-ui/react'
+import { GitCommit } from 'phosphor-react'
 
 export default {
-  title: 'Form/Button',
-  component: Button,
-  args: {
-    children: 'Send',
-    variant: 'primary',
-    size: 'md',
-    disabled: false,
-  },
-  argTypes: {
-    variant: {
-      options: ['primary', 'secondary', 'tertiary'],
-      control: {
-        type: 'inline-radio',
-      },
+    title: 'Form/Button',
+    component: Button,
+
+    args: {
+        children: 'Send',
     },
-    size: {
-      options: ['sm', 'md'],
-      control: {
-        type: 'inline-radio',
-      },
-    },
-    disabled: {
-      control: {
-        type: 'boolean',
-      },
-    },
-    onClick: { action: 'clicked' },
-  },
+
+    argTypes: {
+        variant: {
+            options: ['primary', 'secondary', 'tertiary'],
+            control: {
+                type: 'inline-radio',
+            }
+        },
+
+        size: {
+            options: ['sm', 'md',],
+            control: {
+                type: 'inline-radio',
+            }
+        }
+    }
+
 } as Meta<ButtonProps>
 
-export const Primary: StoryObj<ButtonProps> = {}
 
-export const Secondary: StoryObj<ButtonProps> = {
-  args: {
-    variant: 'secondary',
-    children: 'Create new',
-  },
+export const Primary: StoryObj<ButtonProps> = {
+    args: {
+        size: 'md',
+        variant: 'primary',
+    }
+
 }
 
+export const Secondary: StoryObj<ButtonProps> = {
+    args: {
+        variant: 'secondary',
+    }
+}
 export const Tertiary: StoryObj<ButtonProps> = {
-  args: {
-    variant: 'tertiary',
-    children: 'Cancel',
-  },
+    args: {
+        variant: 'tertiary',
+    }
 }
 
 export const Small: StoryObj<ButtonProps> = {
-  args: {
-    size: 'sm',
-  },
-}
-
-export const WithIcon: StoryObj<ButtonProps> = {
-  args: {
-    children: (
-      <>
-        Próximo passo
-        <ArrowRight weight="bold" />
-      </>
-    ),
-  },
+    args: {
+        size: 'sm',
+    }
 }
 
 export const Disabled: StoryObj<ButtonProps> = {
-  args: {
-    disabled: true,
-  },
+    args: {
+        disabled: true,
+    }
 }
+
+
+export const WithIcon: StoryObj<ButtonProps> = {
+    args: {
+        children: (
+            <>
+                Enviar
+                <GitCommit />
+
+            </>
+        ),
+
+        variant: 'secondary',
+    }
+}
+
+
+
+
+

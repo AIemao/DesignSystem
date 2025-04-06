@@ -1,5 +1,7 @@
-import { ComponentProps, ElementType } from 'react'
 import { styled } from '../styles'
+import { ComponentProps } from 'react'
+
+export type ButtonProps = ComponentProps<typeof Button>
 
 export const Button = styled('button', {
   all: 'unset',
@@ -11,11 +13,20 @@ export const Button = styled('button', {
   minWidth: 120,
   boxSizing: 'border-box',
   padding: '0 $4',
+  transition: 'all 0.2s ease-in-out',
+
+
+  '&:disabled': {
+    opacity: 0.6,
+    cursor: 'not-allowed',
+  },
+
 
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   gap: '$2',
+
 
   cursor: 'pointer',
 
@@ -24,24 +35,18 @@ export const Button = styled('button', {
     height: '$4',
   },
 
-  '&:disabled': {
-    cursor: 'not-allowed',
-  },
 
   variants: {
     variant: {
       primary: {
-        color: '$white',
         background: '$ignite500',
+        color: '$white',
 
         '&:not(:disabled):hover': {
           background: '$ignite300',
-        },
-
-        '&:disabled': {
-          backgroundColor: '$gray200',
-        },
+        }
       },
+
 
       secondary: {
         color: '$ignite300',
@@ -49,47 +54,44 @@ export const Button = styled('button', {
 
         '&:not(:disabled):hover': {
           background: '$ignite500',
-          color: '$white',
-        },
-
-        '&:disabled': {
-          color: '$gray200',
-          borderColor: '$gray200',
-        },
+          color: '$white'
+        }
       },
+
 
       tertiary: {
         color: '$gray100',
 
-        '&:not(:disabled):hover': {
-          color: '$white',
-        },
 
-        '&:disabled': {
-          color: '$gray600',
-        },
-      },
+        '&:not(:disabled):hover': {
+          color: '$white'
+        }
+      }
+
+
+
+
     },
+
 
     size: {
-      sm: {
-        height: 38,
+      md: {
+        height: 46
       },
 
-      md: {
-        height: 46,
-      },
+      sm: {
+        height: 38,
+      }
     },
   },
+
 
   defaultVariants: {
     variant: 'primary',
     size: 'md',
-  },
+  }
+
+
 })
 
-export interface ButtonProps extends ComponentProps<typeof Button> {
-  as?: ElementType
-}
-
-Button.displayName = 'Button'
+Button.displayName = 'Button';

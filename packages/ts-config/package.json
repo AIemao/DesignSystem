@@ -1,6 +1,9 @@
 {
-  "name": "@ignite-ui/ts-config",
+  "name": "@celio-gnite-ui/ts-config",
   "version": "1.0.0",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "@celio-gnite-ui/ts-config": "file:"
+  }
 }

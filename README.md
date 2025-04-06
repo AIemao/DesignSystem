@@ -20,6 +20,8 @@ O Design System inclui os seguintes componentes:
 - ✅ Checkbox - Caixas de seleção
 - ✅ Avatar - Componente para exibição de avatares de usuário
 - ✅ MultiStep - Indicador de etapas para formulários multi-etapas
+- ✅ Toastify - Notificações temporárias na interface do usuário
+- ✅ ToolTip - Dicas contextuais ao passar o mouse sobre elementos
 
 ## 🚀 Instalação
 
@@ -81,3 +83,20 @@ npm run build
 ## 📄 Licença
 
 Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para detalhes.
+## 🧹 Limpeza de dependências
+
+Para limpar completamente as dependências e recomeçar a instalação, execute no Git Bash:
+
+```bash
+# Remover node_modules e package-lock.json
+rm -rf node_modules
+rm package-lock.json
+
+# Limpar cache do npm (opcional)
+npm cache clean --force
+
+# Reinstalar dependências
+npm install --legacy-peer-deps
+```
+
+Isso é útil quando você encontra problemas de compatibilidade ou quando precisa atualizar dependências.

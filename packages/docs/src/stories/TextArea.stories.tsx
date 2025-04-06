@@ -1,33 +1,46 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { Box, Text, TextArea, TextAreaProps } from '@ignite-ui/react'
+import { Meta, StoryObj } from '@storybook/react'
+import { TextAreaProps, TextArea, Box, Text } from '@celio-gnite-ui/react'
 
 export default {
-  title: 'Form/Text Area',
-  component: TextArea,
-  args: {},
-  decorators: [
-    (Story) => {
-      return (
-        <Box
-          as="label"
-          css={{ display: 'flex', flexDirection: 'column', gap: '$2' }}
-        >
-          <Text size="sm">Observations</Text>
-          {Story()}
-        </Box>
-      )
-    },
-  ],
-} as Meta<TextAreaProps>
+    title: 'Form/TextArea',
+    component: TextArea,
+
+    args: {},
+    decorators: [
+        (Story) => {
+            return (
+                <Box
+                    as="label"
+                    css={{ display: 'flex', flexDirection: 'column', gap: '$2' }}
+                >
+                    <Text size="sm">Add a comment</Text>
+                    {Story()}
+                </Box >
+            )
+        }
+    ],
+
+
+} as Meta
+
 
 export const Primary: StoryObj<TextAreaProps> = {
-  args: {
-    placeholder: 'Add any observations...',
-  },
+    args: {
+        placeholder: 'Add any observations....',
+    }
 }
 
+
 export const Disabled: StoryObj<TextAreaProps> = {
-  args: {
-    disabled: true,
-  },
+    args: {
+        disabled: true,
+    }
 }
+
+
+
+
+
+
+
+
