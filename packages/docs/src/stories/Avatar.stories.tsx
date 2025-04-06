@@ -1,26 +1,28 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { Avatar, AvatarProps } from '@ignite-ui/react'
+import { Meta, StoryObj } from '@storybook/react'
+import { Avatar, AvatarProps } from '@celio-gnite-ui/react'
 
 export default {
-  title: 'Data display/Avatar',
-  component: Avatar,
-  args: {
-    src: 'https://github.com/aiemao.png',
-    alt: 'Celio Junior',
-  },
-  argTypes: {
-    src: {
-      control: {
-        type: 'text',
-      },
-    },
-  },
-} as Meta<AvatarProps>
+    title: 'Data Display/Avatar',
+    component: Avatar,
+
+
+    args: {
+        src: 'https://avatars.githubusercontent.com/u/75762976?v=4',
+        alt: 'Gustavo Salviato'
+    }
+} as Meta
+
 
 export const Primary: StoryObj<AvatarProps> = {}
 
-export const WithFallback: StoryObj<AvatarProps> = {
-  args: {
-    src: undefined,
-  },
+
+export const WithFallBack: StoryObj<AvatarProps> = {
+    args: {
+        src: undefined,
+    }
 }
+
+
+
+
+
